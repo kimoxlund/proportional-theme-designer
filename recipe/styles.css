@@ -1,0 +1,183 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(var(--font-size-root) * 1px);
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: var(--font-family-base);
+  font-size: calc(var(--text-multiplier-sm) * 0.5rem);
+  color: hsl(var(--h), 20%, calc(var(--contrast) * 1%));
+  background-color: hsl(var(--h), 2%, 100%);
+}
+
+h1 {
+  margin: 0;
+  font-size: calc(var(--text-ratio) * 2.5rem);
+  font-weight: var(--font-weight-heading);
+  line-height: 1.125;
+}
+
+h2 {
+  padding-top: 1rem;
+  font-size: calc(var(--text-ratio) * 1.75rem);
+  font-weight: var(--font-weight-heading);
+}
+
+.lead {
+  font-size: calc(var(--text-multiplier-sm) * 0.75rem);
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: calc(var(--text-multiplier-sm) * 0.5rem);
+}
+
+img {
+  width: 100%;
+}
+
+dl {
+  margin: 0;
+  font-size: calc(var(--text-multiplier-sm) * 0.5rem);
+}
+
+dt {
+  width: 3rem;
+  display: inline-block;
+  margin: 0.25rem 0;
+  font-weight: 700;
+}
+
+dd {
+  margin: 0;
+  display: inline;
+}
+
+dd:after {
+  content: "\a";
+  white-space: pre;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: calc(var(--page-width) * 1rem);
+  margin: calc(var(--spacing-base) * 1rem) auto;
+  padding: var(--spacing-base) 0;
+  color: var(--header-text);
+  text-align: var(--text-align);
+}
+
+.logo {
+  font-size: calc(var(--text-ratio) * 1.5rem);
+  color: hsl(var(--h), 20%, calc(var(--contrast) * 1%));
+  text-decoration: none;
+}
+
+.logo-image {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  fill: hsl(var(--h), calc(var(--s) * 1%), calc(var(--l) * 1%));
+}
+
+.btn {
+  display: inline-block;
+  padding: calc(var(--spacing-base) * 0.175rem)
+    calc(var(--spacing-base) * 0.5rem);
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 2px solid hsl(var(--h), calc(var(--s) * 1%), calc(var(--l) * 1%));
+  border-radius: 0.25rem;
+  background-color: hsl(var(--h), 100%, 95%);
+}
+
+.recipe {
+  max-width: calc(var(--page-width) * 1rem);
+  margin: 0 auto var(--spacing-base) auto;
+  padding-top: calc(var(--spacing-base) * 1rem);
+  padding-bottom: calc(var(--spacing-base) * 1rem);
+  padding-left: calc(var(--spacing-base) * 1rem);
+  padding-right: calc(var(--spacing-base) * 1rem);
+  background-color: #ffffff;
+  border-top: 2px solid hsl(var(--h), 50%, 90%);
+}
+
+.recipe-byline {
+  margin-top: calc(var(--spacing-base) * 0.5rem);
+  margin-bottom: calc(var(--spacing-base) * 0.5rem);
+}
+
+.section {
+  margin-top: calc(var(--spacing-base) * 0.5rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section--text {
+  max-width: 40rem;
+}
+
+.recipe-meta {
+  padding: calc(var(--spacing-base) * 0.25rem);
+  background-color: hsl(var(--h), 60%, 93%);
+  border-top: 3px solid hsl(var(--h), calc(var(--s) * 1%), calc(var(--l) * 1%));
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-item {
+  margin-bottom: calc(var(--spacing-base) * 0.25rem);
+  position: relative;
+}
+
+.list-item:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  display: inline-flex;
+  margin-right: 1rem;
+  background-color: hsl(var(--h), 50%, 50%);
+  border-radius: 50%;
+}
+
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  margin: 0;
+  padding: 0;
+}
+
+ol li {
+  counter-increment: my-awesome-counter;
+  display: flex;
+  margin-bottom: calc(var(--spacing-base) * 0.25rem);
+}
+
+ol li::before {
+  content: "0" counter(my-awesome-counter);
+  width: 3rem;
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: hsl(var(--h), 50%, 50%);
+  line-height: 1;
+}
